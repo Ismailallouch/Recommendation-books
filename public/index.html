@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommandation de Livres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-book-open"></i>
+                <span>BookRecommender</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Accueil</a>
+                <a href="#recommendations" class="nav-link">Recommandations</a>
+                <a href="#chatbot" class="nav-link">Assistant</a>
+                <button class="nav-link" id="login-btn">Connexion</button>
+                <button class="nav-link" id="register-btn">Inscription</button>
+                <button class="nav-link" id="logout-btn" style="display: none;">Déconnexion</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Découvrez votre prochain livre préféré</h1>
+                <p>Notre site web vous accompagne dans la découverte de livres qui correspondent à vos goûts et centres d’intérêt, pour une expérience de lecture personnalisée et enrichissante</p>
+                <button class="cta-button" id="get-started-btn">Commencer</button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-books"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de connexion -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal d'inscription -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-nom">Nom complet</label>
+                    <input type="text" id="register-nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-age">Âge</label>
+                    <input type="number" id="register-age" min="1" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-statut">Statut familial</label>
+                    <select id="register-statut" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="célibataire">Célibataire</option>
+                        <option value="en couple">En couple</option>
+                        <option value="marié">Marié</option>
+                        <option value="parent">Parent</option>
+                        <option value="étudiant">Étudiant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Genres préférés (sélectionnez plusieurs)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="roman"> Roman</label>
+                        <label><input type="checkbox" value="science-fiction"> Science-fiction</label>
+                        <label><input type="checkbox" value="fantasy"> Fantasy</label>
+                        <label><input type="checkbox" value="policier"> Policier</label>
+                        <label><input type="checkbox" value="biographie"> Biographie</label>
+                        <label><input type="checkbox" value="histoire"> Histoire</label>
+                        <label><input type="checkbox" value="développement personnel"> Développement personnel</label>
+                        <label><input type="checkbox" value="cuisine"> Cuisine</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section des recommandations -->
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <h2>Vos recommandations personnalisées</h2>
+            <div id="recommendations-container" class="books-grid">
+                <!-- Les livres seront ajoutés ici dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section du chatbot -->
+    <section id="chatbot" class="chatbot-section">
+        <div class="container">
+            <h2>Assistant virtuel</h2>
+            <div class="chatbot-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Bonjour ! Je suis votre assistant de recommandation de livres. Comment puis-je vous aider ?
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Tapez votre message...">
+                    <button id="send-message-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BookRecommender. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
