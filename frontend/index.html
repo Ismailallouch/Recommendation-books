@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventi club - Donnez votre avis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+  <!-- Navbar simple -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 px-3">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/logo-hotel.png" alt="Logo Hôtel" width="48" height="48" class="me-2">
+      Eventi club
+    </a>
+    <div class="ms-auto">
+      <select id="lang-switch" class="form-select">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner position-relative mb-5">
+    <img src="img/hotel-cover.jpeg" alt="Hôtel" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center text-white">
+      <h1 id="title" class="display-3 fw-bold">Donnez votre avis sur notre hôtel</h1>
+      <p class="lead">Votre expérience compte pour nous !</p>
+    </div>
+  </section>
+
+  <!-- Présentation -->
+  <section class="container mb-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="img/chambre.jpeg" alt="Chambre" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Bienvenue à Eventi club </h2>
+        <p>Profitez d'un séjour inoubliable dans un cadre luxueux, avec des chambres confortables, un restaurant raffiné, un spa, une piscine et un service irréprochable. Votre avis nous aide à nous améliorer chaque jour !</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant -->
+  <section class="container mb-5">
+    <div class="row align-items-center flex-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="img/restaurant.jpeg" alt="Restaurant" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Restaurant Gastronomique</h2>
+        <p>Découvrez notre restaurant gastronomique, où nos chefs vous proposent une cuisine raffinée, locale et de saison. Profitez d'une expérience culinaire unique dans un cadre élégant et chaleureux.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activités / Loisirs -->
+  <section class="container mb-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="img/activites.jpeg" alt="Activités" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Activités & Loisirs</h2>
+        <p>Relaxez-vous dans notre spa, profitez de la piscine, de la salle de sport, ou explorez les environs grâce à nos activités et excursions organisées. Il y en a pour tous les goûts !</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Piscine -->
+  <section class="container mb-5">
+    <div class="row align-items-center flex-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="img/piscine.jpg" alt="Piscine" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Piscine extérieure</h2>
+        <p>Profitez de notre grande piscine extérieure chauffée, idéale pour la détente et le plaisir en famille ou entre amis. Transats, parasols et service au bord de l'eau sont à votre disposition pour un moment inoubliable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire d'avis -->
+  <section class="container mb-5">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <h3 class="card-title mb-4" id="form-title">Laissez votre avis</h3>
+        <form id="review-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="nom" id="label-nom" class="form-label">Nom (optionnel)</label>
+              <input type="text" id="nom" name="nom" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label for="commentaire" id="label-commentaire" class="form-label">Commentaires</label>
+              <input type="text" id="commentaire" name="commentaire" class="form-control">
+            </div>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label id="label-proprete" class="form-label">Propreté</label>
+              <div class="note-group" data-field="proprete">
+                <input type="radio" name="proprete" value="1" id="proprete-1"><label for="proprete-1">1</label>
+                <input type="radio" name="proprete" value="2" id="proprete-2"><label for="proprete-2">2</label>
+                <input type="radio" name="proprete" value="3" id="proprete-3"><label for="proprete-3">3</label>
+                <input type="radio" name="proprete" value="4" id="proprete-4"><label for="proprete-4">4</label>
+                <input type="radio" name="proprete" value="5" id="proprete-5"><label for="proprete-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-service" class="form-label">Service</label>
+              <div class="note-group" data-field="service">
+                <input type="radio" name="service" value="1" id="service-1"><label for="service-1">1</label>
+                <input type="radio" name="service" value="2" id="service-2"><label for="service-2">2</label>
+                <input type="radio" name="service" value="3" id="service-3"><label for="service-3">3</label>
+                <input type="radio" name="service" value="4" id="service-4"><label for="service-4">4</label>
+                <input type="radio" name="service" value="5" id="service-5"><label for="service-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-restauration" class="form-label">Restauration</label>
+              <div class="note-group" data-field="restauration">
+                <input type="radio" name="restauration" value="1" id="restauration-1"><label for="restauration-1">1</label>
+                <input type="radio" name="restauration" value="2" id="restauration-2"><label for="restauration-2">2</label>
+                <input type="radio" name="restauration" value="3" id="restauration-3"><label for="restauration-3">3</label>
+                <input type="radio" name="restauration" value="4" id="restauration-4"><label for="restauration-4">4</label>
+                <input type="radio" name="restauration" value="5" id="restauration-5"><label for="restauration-5">5</label>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label id="label-confort" class="form-label">Confort</label>
+              <div class="note-group" data-field="confort">
+                <input type="radio" name="confort" value="1" id="confort-1"><label for="confort-1">1</label>
+                <input type="radio" name="confort" value="2" id="confort-2"><label for="confort-2">2</label>
+                <input type="radio" name="confort" value="3" id="confort-3"><label for="confort-3">3</label>
+                <input type="radio" name="confort" value="4" id="confort-4"><label for="confort-4">4</label>
+                <input type="radio" name="confort" value="5" id="confort-5"><label for="confort-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-qualite_prix" class="form-label">Qualité/Prix</label>
+              <div class="note-group" data-field="qualite_prix">
+                <input type="radio" name="qualite_prix" value="1" id="qualite_prix-1"><label for="qualite_prix-1">1</label>
+                <input type="radio" name="qualite_prix" value="2" id="qualite_prix-2"><label for="qualite_prix-2">2</label>
+                <input type="radio" name="qualite_prix" value="3" id="qualite_prix-3"><label for="qualite_prix-3">3</label>
+                <input type="radio" name="qualite_prix" value="4" id="qualite_prix-4"><label for="qualite_prix-4">4</label>
+                <input type="radio" name="qualite_prix" value="5" id="qualite_prix-5"><label for="qualite_prix-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-emplacement" class="form-label">Emplacement</label>
+              <div class="note-group" data-field="emplacement">
+                <input type="radio" name="emplacement" value="1" id="emplacement-1"><label for="emplacement-1">1</label>
+                <input type="radio" name="emplacement" value="2" id="emplacement-2"><label for="emplacement-2">2</label>
+                <input type="radio" name="emplacement" value="3" id="emplacement-3"><label for="emplacement-3">3</label>
+                <input type="radio" name="emplacement" value="4" id="emplacement-4"><label for="emplacement-4">4</label>
+                <input type="radio" name="emplacement" value="5" id="emplacement-5"><label for="emplacement-5">5</label>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label id="label-wifi" class="form-label">Wi-Fi</label>
+              <div class="note-group" data-field="wifi">
+                <input type="radio" name="wifi" value="1" id="wifi-1"><label for="wifi-1">1</label>
+                <input type="radio" name="wifi" value="2" id="wifi-2"><label for="wifi-2">2</label>
+                <input type="radio" name="wifi" value="3" id="wifi-3"><label for="wifi-3">3</label>
+                <input type="radio" name="wifi" value="4" id="wifi-4"><label for="wifi-4">4</label>
+                <input type="radio" name="wifi" value="5" id="wifi-5"><label for="wifi-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-calme" class="form-label">Calme</label>
+              <div class="note-group" data-field="calme">
+                <input type="radio" name="calme" value="1" id="calme-1"><label for="calme-1">1</label>
+                <input type="radio" name="calme" value="2" id="calme-2"><label for="calme-2">2</label>
+                <input type="radio" name="calme" value="3" id="calme-3"><label for="calme-3">3</label>
+                <input type="radio" name="calme" value="4" id="calme-4"><label for="calme-4">4</label>
+                <input type="radio" name="calme" value="5" id="calme-5"><label for="calme-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-securite" class="form-label">Sécurité</label>
+              <div class="note-group" data-field="securite">
+                <input type="radio" name="securite" value="1" id="securite-1"><label for="securite-1">1</label>
+                <input type="radio" name="securite" value="2" id="securite-2"><label for="securite-2">2</label>
+                <input type="radio" name="securite" value="3" id="securite-3"><label for="securite-3">3</label>
+                <input type="radio" name="securite" value="4" id="securite-4"><label for="securite-4">4</label>
+                <input type="radio" name="securite" value="5" id="securite-5"><label for="securite-5">5</label>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label id="label-accessibilite" class="form-label">Accessibilité</label>
+              <div class="note-group" data-field="accessibilite">
+                <input type="radio" name="accessibilite" value="1" id="accessibilite-1"><label for="accessibilite-1">1</label>
+                <input type="radio" name="accessibilite" value="2" id="accessibilite-2"><label for="accessibilite-2">2</label>
+                <input type="radio" name="accessibilite" value="3" id="accessibilite-3"><label for="accessibilite-3">3</label>
+                <input type="radio" name="accessibilite" value="4" id="accessibilite-4"><label for="accessibilite-4">4</label>
+                <input type="radio" name="accessibilite" value="5" id="accessibilite-5"><label for="accessibilite-5">5</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label id="label-activites" class="form-label">Activités</label>
+              <div class="note-group" data-field="activites">
+                <input type="radio" name="activites" value="1" id="activites-1"><label for="activites-1">1</label>
+                <input type="radio" name="activites" value="2" id="activites-2"><label for="activites-2">2</label>
+                <input type="radio" name="activites" value="3" id="activites-3"><label for="activites-3">3</label>
+                <input type="radio" name="activites" value="4" id="activites-4"><label for="activites-4">4</label>
+                <input type="radio" name="activites" value="5" id="activites-5"><label for="activites-5">5</label>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-lg px-5">Envoyer l'avis</button>
+            <a href="avis.html" id="link-avis" class="btn btn-outline-secondary">Voir les avis</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <img src="img/logo-hotel.png" alt="Logo Hôtel" width="40" class="mb-2">
+      <p class="mb-0">&copy; 2025 Eventi production. Tous droits réservés.</p>
+      <small>complexe sportif de hay Al Adarissa | 05357491 | eventiprod@gmail.com</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> 

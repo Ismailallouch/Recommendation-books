@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - Avis clients</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white pb-4 mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo-hotel.png" alt="Logo Hôtel" width="48" height="48" class="me-2">
+        Eventi club 
+      </a>
+      <div class="ms-auto">
+        <select id="lang-switch" class="form-select">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- Statistiques -->
+  <section class="container mb-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6">
+        <div class="card shadow text-center p-4">
+          <h2 id="note-generale" class="mb-3">Note générale</h2>
+          <div id="score" class="display-4 fw-bold text-primary mb-2">-</div>
+          <div id="statistiques" class="mb-2"></div>
+          <canvas id="chartStats" height="120"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h3 id="titre-positifs" class="text-success mb-3">Avis positifs</h3>
+          <ul id="liste-positifs" class="list-unstyled mb-4"></ul>
+          <h3 id="titre-moyens" class="text-warning mb-3">Avis moyens</h3>
+          <ul id="liste-moyens" class="list-unstyled mb-4"></ul>
+          <h3 id="titre-negatifs" class="text-danger mb-3">Avis négatifs</h3>
+          <ul id="liste-negatifs" class="list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liste détaillée des avis -->
+  <section class="container mb-5">
+    <h2 class="mb-4">Tous les avis</h2>
+    <div class="row" id="avis-list"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <img src="img/logo-hotel.png" alt="Logo Hôtel" width="40" class="mb-2">
+      <p class="mb-0">&copy; 2025 Eventi club . Tous droits réservés.</p>
+      <small>complexe sportif de hay Al Adarissa  | 05 35 74 91 40  | evntiprod@gmail.com</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> 
