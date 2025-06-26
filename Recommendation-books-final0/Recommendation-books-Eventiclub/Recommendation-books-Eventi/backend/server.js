@@ -1,6 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
+const connectDB = require('./config/db');
 const reviewRoutes = require('./routes/reviews');
 const adminRoutes = require('./routes/admin');
 require('dotenv').config();
@@ -17,12 +17,7 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminRoutes);
 
 // Connexion à MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hotel_reviews', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connecté'))
-.catch((err) => console.error('Erreur MongoDB:', err));
+connectDB();
 
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur le port ${PORT}`);
