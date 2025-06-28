@@ -9,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors());//Le middleware cors autorise ces requêtes entre domaines différents.
+app.use(express.json()); //Ce middleware permet à Express de comprendre le format JSON dans le corps (body) des requêtes HTTP.
 
 // Routes
 app.use('/api/reviews', reviewRoutes);
