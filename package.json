@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "scrape": "python scraper/amazon_scraper.py",
     "seed": "node scripts/seed_data.js",
-    "setup": "node setup.js"
+    "setup": "node setup.js",
+    "railway": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
