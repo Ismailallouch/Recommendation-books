@@ -33,7 +33,7 @@ class AmazonBookScraper:
     def setup_database(self):
         """Configuration de la connexion MongoDB"""
         try:
-            mongo_uri = os.getenv('MONGODB_URI', 'mongodb://localhost:27017/recommendation_books')
+            mongo_uri = os.getenv('MONGODB_URI', 'mongodb+srv://allouch:AqtbMkehTJ8ZUpYz@recommandation.aaems6q.mongodb.net/?retryWrites=true&w=majority&appName=Recommandation')
             self.client = pymongo.MongoClient(mongo_uri)
             self.db = self.client.recommendation_books
             self.books_collection = self.db.books
