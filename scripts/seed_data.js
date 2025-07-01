@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // Connexion MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://allouch:AqtbMkehTJ8ZUpYz@recommandation.aaems6q.mongodb.net/?retryWrites=true&w=majority&appName=Recommandation', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/recommendation_books', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
